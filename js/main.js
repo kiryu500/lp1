@@ -23,9 +23,6 @@ $('.slide-L').on('inview', function(event, isInView, visiblePartX, visiblePartY)
   });
 });
 
-$('.nav_toggle').on('click', function () {
-  $('.nav_toggle, .nav').toggleClass('show');
-});
 
 //TOP切り替え
 (function(){
