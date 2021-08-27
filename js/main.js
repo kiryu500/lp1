@@ -1,6 +1,6 @@
 //画面に入ってから表示させる
 // BBBが選ばれる理由（スライド左）
-$(function() {
+(function() {
 $('.slide-L').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
     if(isInView){
       // 要素が表示されたらslide-leftクラスを追加
