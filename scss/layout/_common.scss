@@ -1,0 +1,48 @@
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin: 100px 0;
+  position: relative;
+  color: #333;
+  @include mq() {
+    font-size: 25px;
+    margin: 70px 0 50px;
+  }
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: #333;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 15px;
+  @include mq() {
+    margin-top: 10px;
+    height: 2px;
+  }
+}
+
+//フェードインアニメメーション
+@keyframes fade-left {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fade-right {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

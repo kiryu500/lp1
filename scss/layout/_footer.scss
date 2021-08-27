@@ -1,0 +1,45 @@
+footer {
+  padding: 40px 40px 20px;
+  background-color: #e8e8e8;
+  @include mq() {
+    padding: 30px 0 10px;
+    width: 100%;
+  }
+  .inner {
+    display: flex;
+    justify-content: center;
+    @include mq() {
+      flex-wrap: wrap;
+    }
+    .footer-menu-title {
+      font-size: 14px;
+      margin-left: 40px;
+      font-weight: bold;
+      @include mq() {
+        font-size: 0.7rem;
+      }
+    }
+    .footer-menu {
+      flex-wrap: wrap;
+      @include mq() {
+        width: 45%;
+        justify-content: center;
+        padding: 0;
+      }
+      li {
+        font-size: 15px;
+        width: 100%;
+        list-style: none;
+        margin: 0 30px;
+        @include mq() {
+          font-size: 0.5rem;
+          width: 95%;
+        }
+      }
+    }
+  }
+  .copyright {
+    text-align: center;
+    margin-top: 50px;
+  }
+}

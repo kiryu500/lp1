@@ -1,0 +1,155 @@
+header {
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  @include mq() {
+    width: 100%;
+    height: 50px;
+  }
+  .site-title {
+    float: left;
+    img {
+      margin: 15px;
+      height: 56px;
+      @include mq() {
+        height: 30px;
+        margin: 8px;
+      }
+    }
+  }
+  .active {
+    transition: 0.3s;
+    opacity: 1;
+    visibility: visible;
+    margin: 0 auto;
+  }
+  nav {
+    position: fixed;
+    z-index: 200;
+    display: block;
+    padding-top: 140px;
+    padding-bottom: 200px;
+    width: 100%;
+    background-color: rgba(48, 48, 48, 0.884);
+    justify-content: center;
+    opacity: 0;
+    margin-top: -300px;
+    @include mq() {
+      padding-top: 120px;
+      padding-bottom: 70px;
+    }
+    img {
+      position: absolute;
+      width: 100px;
+      top: 15px;
+      left: 15px;
+    }
+    .nav_menu_ul {
+      align-items: center;
+      justify-content: center;
+      .nav_menu_li {
+        margin: 0 auto 10px;
+        list-style: none;
+        text-align: center;
+        a {
+          font-size: 30px;
+          color: rgb(255, 255, 255);
+          text-decoration: none;
+          @include mq() {
+            font-size: 14px;
+          }
+        }
+      }
+      .nav-free {
+        margin: 25px auto 0;
+        padding: 7px 0;
+        border: 1px solid rgb(255, 255, 255);
+        width: 400px;
+        position: relative;
+        @include mq() {
+          width: 90%;
+        }
+      }
+      .nav-free::after {
+        content: "";
+        width: 390px;
+        border-right: solid 1px #fff;
+        border-bottom: solid 1px #fff;
+        padding: 15px 0;
+        position: absolute;
+        right: -6px;
+        bottom: -6px;
+        @include mq() {
+          width: 90%;
+        }
+      }
+      .nav-free:hover {
+        background-color: rgba(182, 182, 182, 0.61);
+        transition: 1s;
+      }
+    }
+  }
+  .nav_toggle {
+    z-index: 400;
+    position: fixed;
+    right: 0;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(230, 64, 64);
+    float: right;
+    cursor: pointer;
+    transition: 0.3s;
+    @include mq() {
+      width: 50px;
+      height: 50px;
+    }
+    span {
+      position: absolute;
+      width: 50px;
+      height: 2px;
+      left: 25px;
+      background-color: rgb(255, 255, 255);
+      transition: transform 0.5s, opacity 0.5s;
+      @include mq() {
+        width: 25px;
+        left: 12.5px;
+        height: 1px;
+      }
+    }
+    span:nth-child(1) {
+      top: 33px;
+      @include mq() {
+        top: 16.5px;
+      }
+    }
+    span:nth-child(2) {
+      top: 50px;
+      margin: 0;
+      @include mq() {
+        top: 25px;
+      }
+    }
+    span:nth-child(3) {
+      top: 68px;
+      @include mq() {
+        top: 34px;
+      }
+    }
+  }
+  .nav_toggle:hover {
+    opacity: 0.8;
+    transition: 0.5s;
+  }
+}
+.nav_toggle span:nth-child(1) {
+  top: 0;
+}
+.nav_toggle span:nth-child(2) {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.nav_toggle span:nth-child(3) {
+  bottom: 0;
+}
