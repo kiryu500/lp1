@@ -1,6 +1,6 @@
 //画面に入ってから表示させる
 // BBBが選ばれる理由（スライド左）
-(function() {
+$(function() {
 $('.slide-L').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
     if(isInView){
       // 要素が表示されたらslide-leftクラスを追加
@@ -25,7 +25,7 @@ $('.slide-L').on('inview', function(event, isInView, visiblePartX, visiblePartY)
 
 
 //TOP切り替え
-(function(){
+$(function(){
 // 設定
 var interval =3000; // 切り替わりの間隔（ミリ秒）
 var fade_speed = 1000;// フェード処理の早さ（ミリ秒）
